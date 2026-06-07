@@ -1,0 +1,9 @@
+node_modules/
+dist/
+docs-dist/
+.dumi/
+.umi/
+.cache/
+.playwright-mcp/
+*.log
+.DS_Store

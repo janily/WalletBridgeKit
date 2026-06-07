@@ -1,0 +1,56 @@
+{
+  "name": "@zeroone/walletbridgekit",
+  "version": "0.1.0",
+  "description": "A React and Next.js friendly EVM wallet account SDK with multi-wallet connectors, Zustand state, hooks, and dumi docs.",
+  "keywords": [
+    "wallet",
+    "web3",
+    "evm",
+    "react",
+    "nextjs",
+    "dumi"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "sideEffects": [
+    "src/ui/styles.css",
+    "dist/**/*.css"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "dumi dev",
+    "docs:build": "dumi build",
+    "build": "father build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@coinbase/wallet-sdk": "^4.3.0",
+    "@walletconnect/ethereum-provider": "^2.21.1",
+    "viem": "^2.31.0",
+    "zustand": "^5.0.5"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.5.2",
+    "dumi": "^2.4.21",
+    "father": "^4.5.4",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.3"
+  }
+}
