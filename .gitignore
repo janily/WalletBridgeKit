@@ -1,9 +1,76 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
 node_modules/
+jspm_packages/
+web_modules/
+
+# Build outputs
 dist/
 docs-dist/
+out/
+build/
+coverage/
+*.lcov
+*.tgz
+
+# Tool caches
+.cache/
+.parcel-cache/
+.vite/
 .dumi/
 .umi/
-.cache/
 .playwright-mcp/
-*.log
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# Framework outputs
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+.vuepress/dist/
+.temp/
+**/.vitepress/dist
+**/.vitepress/cache
+.docusaurus/
+
+# Package manager state
+.npm/
+.pnpm-store/
+.yarn-integrity
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS/editor files
 .DS_Store
+.node_repl_history
+.vscode-test/
+
+# Misc generated files
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
