@@ -13,24 +13,14 @@ npm install @zeroone/walletbridgekit
 ```tsx
 'use client';
 
-import { WalletBridgeProvider, WalletConnectButton, WalletStatus } from '@zeroone/walletbridgekit';
-
-const chains = [
-  {
-    id: 8453,
-    name: 'Base',
-    rpcUrls: ['https://mainnet.base.org'],
-    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
-    blockExplorerUrls: ['https://basescan.org'],
-  },
-];
+import { WalletBridgeProvider, WalletConnectButton, WalletStatus, supportedChains } from '@zeroone/walletbridgekit';
 
 export function WalletRoot({ children }: { children: React.ReactNode }) {
   return (
     <WalletBridgeProvider
       config={{
         appName: 'ZeroOne App',
-        chains,
+        chains: supportedChains,
         autoReconnect: true,
         defaultChainId: 8453,
         walletConnectProjectId: 'YOUR_PROJECT_ID',

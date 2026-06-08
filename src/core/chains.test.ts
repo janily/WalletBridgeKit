@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { findChain, isSupportedChain, parseChainId, toHexChainId } from './chains';
+import { findChain, isSupportedChain, parseChainId, supportedChains, toAddEthereumChainParams, toHexChainId } from './chains';
 
 const chains = [
   {
@@ -31,5 +31,21 @@ describe('chains', () => {
     expect(findChain(chains, 8453)?.name).toBe('Base');
     expect(isSupportedChain(chains, 8453)).toBe(true);
     expect(isSupportedChain(chains, 10)).toBe(false);
+  });
+
+  it('includes Sepolia as a supported test network', () => {
+    const sepolia = findChain(supportedChains, 11155111);
+
+    expect(sepolia).toMatchObject({
+      id: 11155111,
+      name: 'Sepolia',
+      rpcUrls: ['https://rpc.sepolia.org'],
+      nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
+      blockExplorerUrls: ['https://sepolia.etherscan.io'],
+    });
+    expect(toAddEthereumChainParams(sepolia!)).toMatchObject({
+      chainId: '0xaa36a7',
+      chainName: 'Sepolia',
+    });
   });
 });

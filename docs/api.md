@@ -3,10 +3,12 @@
 ## Provider
 
 ```text
+import { supportedChains } from '@zeroone/walletbridgekit';
+
 <WalletBridgeProvider
   config={{
     appName: 'ZeroOne App',
-    chains,
+    chains: supportedChains,
     autoReconnect: true,
     defaultChainId: 8453,
     walletConnectProjectId: 'YOUR_PROJECT_ID',
@@ -15,6 +17,8 @@
   <App />
 </WalletBridgeProvider>
 ```
+
+`supportedChains` 内置 Ethereum、Base 和 Sepolia 测试网。Sepolia 的 chain ID 为 `11155111`。
 
 ## Hooks
 
@@ -54,6 +58,7 @@ await disconnect();
 ```text
 const { switchChain, isSwitchingChain, error } = useSwitchChain();
 await switchChain(8453);
+await switchChain(11155111);
 ```
 
 ### useBalance
@@ -71,4 +76,3 @@ await refreshBalance();
 <ChainSwitcher />
 <WalletStatus />
 ```
-

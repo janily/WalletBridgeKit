@@ -7,6 +7,7 @@
 ```text
 const { switchChain } = useSwitchChain();
 await switchChain(8453);
+await switchChain(11155111);
 ```
 
 SDK 会执行：
@@ -40,4 +41,3 @@ type WalletBridgeErrorCode =
   | 'ADD_CHAIN_FAILED'
   | 'PROVIDER_UNAVAILABLE';
 ```
-

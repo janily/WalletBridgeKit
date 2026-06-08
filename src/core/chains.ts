@@ -1,5 +1,29 @@
 import type { ChainConfig } from '../types';
 
+export const supportedChains: ChainConfig[] = [
+  {
+    id: 1,
+    name: 'Ethereum',
+    rpcUrls: ['https://eth.llamarpc.com'],
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    blockExplorerUrls: ['https://etherscan.io'],
+  },
+  {
+    id: 8453,
+    name: 'Base',
+    rpcUrls: ['https://mainnet.base.org'],
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    blockExplorerUrls: ['https://basescan.org'],
+  },
+  {
+    id: 11155111,
+    name: 'Sepolia',
+    rpcUrls: ['https://rpc.sepolia.org'],
+    nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
+    blockExplorerUrls: ['https://sepolia.etherscan.io'],
+  },
+];
+
 export function toHexChainId(chainId: number): string {
   if (!Number.isInteger(chainId) || chainId <= 0) {
     throw new Error(`Invalid chain id: ${chainId}`);

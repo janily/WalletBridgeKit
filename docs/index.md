@@ -13,21 +13,7 @@ npm install @zeroone/walletbridgekit
 ```text
 'use client';
 
-import { WalletBridgeProvider, WalletConnectButton, WalletStatus } from '@zeroone/walletbridgekit';
-
-const chains = [
-  {
-    id: 8453,
-    name: 'Base',
-    rpcUrls: ['https://mainnet.base.org'],
-    nativeCurrency: {
-      name: 'Ether',
-      symbol: 'ETH',
-      decimals: 18,
-    },
-    blockExplorerUrls: ['https://basescan.org'],
-  },
-];
+import { WalletBridgeProvider, WalletConnectButton, WalletStatus, supportedChains } from '@zeroone/walletbridgekit';
 
 export default function WalletRoot() {
   return (
@@ -37,7 +23,7 @@ export default function WalletRoot() {
         autoReconnect: true,
         defaultChainId: 8453,
         walletConnectProjectId: 'YOUR_PROJECT_ID',
-        chains,
+        chains: supportedChains,
       }}
     >
       <WalletConnectButton />
@@ -54,4 +40,3 @@ export default function WalletRoot() {
 - 监听 `chainChanged`，钱包内切链后自动更新全局链 ID。
 - 主动 `switchChain` 失败时返回标准化错误并支持 UI 提示。
 - 支持自动重连，刷新页面后恢复上一次授权的钱包。
-
