@@ -339,7 +339,7 @@ export interface WalletBridgeConfig {
 ### 11.1 Provider
 
 ```text
-import { WalletBridgeProvider } from '@zeroone/walletbridgekit';
+import { WalletBridgeProvider } from '@janily/walletbridgekit';
 
 export function App() {
   return (
@@ -496,7 +496,7 @@ export interface WalletBalance {
 ```text
 'use client';
 
-import { WalletBridgeProvider } from '@zeroone/walletbridgekit';
+import { WalletBridgeProvider } from '@janily/walletbridgekit';
 ```
 
 ## 16. 包结构建议

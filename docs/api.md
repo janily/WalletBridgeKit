@@ -3,7 +3,7 @@
 ## Provider
 
 ```text
-import { supportedChains } from '@zeroone/walletbridgekit';
+import { supportedChains } from '@janily/walletbridgekit';
 
 <WalletBridgeProvider
   config={{

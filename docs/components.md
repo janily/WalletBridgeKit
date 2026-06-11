@@ -7,7 +7,7 @@ import {
   WalletConnectButton,
   WalletStatus,
   supportedChains,
-} from '@zeroone/walletbridgekit';
+} from '@janily/walletbridgekit';
 
 export default () => (
   <WalletBridgeProvider

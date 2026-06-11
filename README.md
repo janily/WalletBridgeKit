@@ -5,7 +5,7 @@ WalletBridgeKit is a React and Next.js friendly EVM wallet account SDK. It provi
 ## Install
 
 ```bash
-npm install @zeroone/walletbridgekit
+npm install @janily/walletbridgekit
 ```
 
 ## Quick Start
@@ -13,7 +13,7 @@ npm install @zeroone/walletbridgekit
 ```tsx
 'use client';
 
-import { WalletBridgeProvider, WalletConnectButton, WalletStatus, supportedChains } from '@zeroone/walletbridgekit';
+import { WalletBridgeProvider, WalletConnectButton, WalletStatus, supportedChains } from '@janily/walletbridgekit';
 
 export function WalletRoot({ children }: { children: React.ReactNode }) {
   return (

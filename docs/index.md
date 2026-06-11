@@ -5,7 +5,7 @@ WalletBridgeKit 是一个面向 React / Next.js 的 EVM 钱包账户 SDK，提�
 ## 安装
 
 ```bash
-npm install @zeroone/walletbridgekit
+npm install @janily/walletbridgekit
 ```
 
 ## Next.js 使用
@@ -13,7 +13,7 @@ npm install @zeroone/walletbridgekit
 ```text
 'use client';
 
-import { WalletBridgeProvider, WalletConnectButton, WalletStatus, supportedChains } from '@zeroone/walletbridgekit';
+import { WalletBridgeProvider, WalletConnectButton, WalletStatus, supportedChains } from '@janily/walletbridgekit';
 
 export default function WalletRoot() {
   return (

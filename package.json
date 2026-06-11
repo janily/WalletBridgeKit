@@ -1,6 +1,6 @@
 {
-  "name": "@zeroone/walletbridgekit",
-  "version": "0.1.0",
+  "name": "@janily/walletbridgekit",
+  "version": "0.1.1",
   "description": "A React and Next.js friendly EVM wallet account SDK with multi-wallet connectors, Zustand state, hooks, and dumi docs.",
   "keywords": [
     "wallet",
