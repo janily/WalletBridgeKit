@@ -1,6 +1,6 @@
 {
   "name": "@janily/walletbridgekit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A React and Next.js friendly EVM wallet account SDK with multi-wallet connectors, Zustand state, hooks, and dumi docs.",
   "keywords": [
     "wallet",
@@ -26,7 +26,8 @@
   "scripts": {
     "dev": "dumi dev",
     "docs:build": "dumi build",
-    "build": "father build",
+    "build": "FATHER_TSCONFIG_NAME=tsconfig.build.json father build",
+    "package:verify": "node scripts/verify-package.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
